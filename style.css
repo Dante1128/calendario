@@ -1,0 +1,147 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#calendar {
+    max-width: 600px;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.event {
+    background-color: #ff0000;
+    color: white;
+    padding: 2px 5px;
+    font-size: 12px;
+    border-radius: 5px;
+    margin-top: 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer; /* Agregamos un cursor indicando que el evento es clickable */
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.days-of-week {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.day-of-week {
+    flex: 1;
+    text-align: center;
+}
+
+.days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+}
+
+.day {
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.current-day {
+    background-color: #007bff;
+    color: white;
+}
+
+#eventForm, #eventDetails {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#eventForm textarea {
+    width: 100%;
+    resize: none;
+}
+
+.hidden {
+    display: none;
+}
+
+#closeForm, #closeDetails {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+/* Estilos para el formulario */
+#eventForm {
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+}
+
+/* Estilos para los campos de entrada */
+#eventForm input[type="date"],
+#eventForm input[type="time"],
+#eventForm textarea,
+#eventForm select {
+    width: calc(100% - 20px);
+    margin-bottom: 10px;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para los botones */
+#eventForm button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#eventForm {
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    width:500px; /* Ancho máximo del formulario */
+    margin: 0 auto; /* Centrar el formulario en la página */
+}
+
+/* Estilo para el botón de cerrar */
+#closeForm {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}

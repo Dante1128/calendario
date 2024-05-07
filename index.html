@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar with Events</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<button id="addEventBtn">Añadir Evento</button>
+
+<div id="calendar">
+    <div class="header">
+        <button id="prevBtn">&lt;</button>
+        <h1 id="monthYear"></h1>
+        <button id="nextBtn">&gt;</button>
+    </div>
+    <div class="days-of-week">
+        <div class="day-of-week">Lun</div>
+        <div class="day-of-week">Mar</div>
+        <div class="day-of-week">Mié</div>
+        <div class="day-of-week">Jue</div>
+        <div class="day-of-week">Vie</div>
+        <div class="day-of-week">Sáb</div>
+        <div class="day-of-week">Dom</div>
+    </div>
+    <div class="days"></div>
+</div>
+
+<div id="eventForm">
+    <span id="closeForm">&times;</span>
+    <h3>Añadir Evento</h3>
+    <a href="#"></a><br>
+    <label for="eventType">Tipo de dispositivo:</label><br>
+    <select id="eventType">
+        <option value="celular">Celular</option>
+        <option value="laptop">Laptop</option>
+        <option value="tablet">Tablet</option>
+    </select><br><br>
+    <label for="eventDate">Fecha del Evento:</label><br>
+    <input type="date" id="eventDate"><br>
+    <label for="eventTime">Hora del Evento:</label><br>
+    <input type="time" id="eventTime"><br>
+    <label for="eventDescription">Descripción:</label><br>
+    <textarea id="eventDescription" rows="4"></textarea><br>
+    <label for="eventServiceType">Tipo de servicio:</label><br>
+    <select id="eventServiceType">
+        <option value="domicilio">Domicilio</option>
+        <option value="local">Local</option>
+    </select><br><br>
+    <button id="saveEventBtn">Guardar Evento</button>
+</div>
+
+
+
+<div id="eventDetails" class="hidden">
+    <span id="closeDetails">&times;</span>
+    <h3>Detalles del Evento</h3>
+    <p id="eventDetailsContent"></p>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
